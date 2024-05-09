@@ -1,8 +1,8 @@
 package funcionalidades;
 
 public interface reprodutorMusical {
-    void palyMusic();
+    void playMusic();
     void stopMusic();
     void selectorMusic(String musica);
-    void boasVindas(String app);
+    void boasVindas(int opcao);
 }

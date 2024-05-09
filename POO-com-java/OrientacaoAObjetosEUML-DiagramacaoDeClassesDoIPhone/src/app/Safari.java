@@ -6,15 +6,16 @@ public class Safari implements navegadorDeInternet {
     final String NOME = "Safari";
     final String DESENVOLVEDORA = "Apple";
     final double VERSAO = 2.5;
+
     @Override
-    public void boasVindas(String app) {
+    public void boasVindas() {
         System.out.println("Bem vindo ao " + NOME);
 
     }
 
     @Override
-    public void viewpage() {
-        System.out.println("Você está acesando a o Google!");
+    public void viewPage(String url) {
+        System.out.println("Você está acesando "+url);
 
     }
 
@@ -30,13 +31,28 @@ public class Safari implements navegadorDeInternet {
     }
 
     @Override
-    public void Informations(String nome, String desenvolvora, double versao) {
+    public void informationApp(String nome, String desenvolvora, double versao) {
         System.out.printf("""
                 Você está utilizando o seguinte App: 
                 Nome: %s
                 Desenvolvimento: %s
                 Versão: %.2f
                 """, NOME, DESENVOLVEDORA, VERSAO);
+    }
+
+    public void menu(int opcao){
+        boasVindas();
+        System.out.printf("""
+                =================================================
+                |           O Que você deseja fazer?            |
+                |                                               |
+                |              [1] - ABRIR PÁGINA               |
+                |              [2] - NOVA PÁGINA                |
+                |             [3] - ATUALIZAR PÁGINA            |
+                |         [4] - INFORMAÇÕES DO DISPOSITIVO      |
+                |                 [0] - SAIR                    |
+                =================================================
+                """);
     }
 
 }

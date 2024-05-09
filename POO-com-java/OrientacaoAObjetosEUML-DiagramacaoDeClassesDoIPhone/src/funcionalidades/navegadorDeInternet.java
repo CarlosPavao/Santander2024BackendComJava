@@ -1,10 +1,10 @@
 package funcionalidades;
 
 public interface navegadorDeInternet {
-    void boasVindas(String app);
-    void viewpage();
+    void boasVindas();
+    void viewPage(String url);
     void newPage();
     void refreshPage();
-    void Informations(String nome, String desenvolvora, double versao);
+    void informationApp(String nome, String desenvolvora, double versao);
 
 }

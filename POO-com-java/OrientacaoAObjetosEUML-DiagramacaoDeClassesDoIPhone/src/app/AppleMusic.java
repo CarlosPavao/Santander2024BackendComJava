@@ -18,17 +18,24 @@ public class AppleMusic implements reprodutorMusical {
         this.anoLancamento = anoLancamento;
     }
 
-    public AppleMusic() {
 
+    @Override
+    public void boasVindas(int opcao) {
+        System.out.printf("""
+                                Bem vindo(a) ao "%s
+                =================================================
+                |           O Que você deseja fazer?            |
+                |                                               |
+                |              [1] - PLAY MUSICA                |
+                |              [2] - STOP MUSICA                |
+                |             [3] - SELECIONAR MUSICA           |
+                |                 [0] - SAIR                    |
+                =================================================
+                """, APP);
     }
 
     @Override
-    public void boasVindas(String APP) {
-        System.out.println("Bem vindo(a) ao "+ APP);
-    }
-
-    @Override
-    public void palyMusic() {
+    public void playMusic() {
         System.out.println("Reproduzindo musica");
     }
 
